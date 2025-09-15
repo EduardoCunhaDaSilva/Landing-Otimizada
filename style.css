@@ -1,0 +1,773 @@
+/* ===========================
+   RESET
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Personalizar a barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px;              /* largura da barra */
+}
+
+/* Trilha (fundo da barra) */
+::-webkit-scrollbar-track {
+  background: #002b5c;      /* azul escuro */
+  border-radius: 10px;
+}
+
+/* Puxador (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #00aaff;      /* azul claro */
+  border-radius: 10px;
+  border: 2px solid #002b5c; /* cria "espaço" entre o thumb e a track */
+}
+
+/* Efeito ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #0099dd;      /* tom um pouco mais escuro no hover */
+}
+
+
+
+/* ===========================
+   HERO (cabeçalho principal)
+=========================== */
+.hero {
+  position: relative;
+  background: url("img/background4.png") no-repeat center center/cover;
+}
+
+.hero-content {
+  background: rgba(0, 20, 40,); /* overlay */
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: left;
+  margin-right: 50rem;
+}
+
+.hero-text {
+  max-width: 800px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #1a73e8;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #3b8fe8, #154373);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+  animation: piscar 1.2s ease-in-out infinite; /* animação de piscar */
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #003366, #4a90e2);
+  transform: scale(1.05);
+  animation: none; /* para a animação ao passar o mouse */
+}
+
+@keyframes piscar {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+
+/* ===========================
+   FEATURES (itens destacados)
+=========================== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 0.27fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+
+/* ===========================
+   DIVISOR DE SEÇÕES
+=========================== */
+.divider {
+  height: 3px;
+  width: 100%;
+  background: #1a73e8;
+}
+
+.divider2 {
+  margin-top: 5rem;
+  height: 3px;
+  width: 100%;
+  background: #1a73e8;
+}
+
+
+/* ===========================
+   ABOUT (Quem é Diego Sousa)
+=========================== */
+.about {
+  background: #000;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about h2 span {
+  color: #1a73e8;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+}
+
+.feature {
+  font-weight: bold;
+  position: relative;
+  padding-left: 25px;
+}
+
+.feature::before {
+  content: "✔";
+  color: #1a73e8;
+  position: absolute;
+  left: 0;
+}
+
+.highlights {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding-top: 10px;
+}
+
+.item {
+  font-size: 25px;
+}
+
+.check {
+  height: 25px;
+  align-content: center;
+  justify-content: center;
+}
+
+#about-title {
+  margin-top: 30px;
+}
+
+
+/* ===========================
+   CONSULTORIA TERAPÊUTICA - Parte 1
+=========================== */
+.highlights2 {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.check2 {
+  display: flex;
+  height: 150px;
+}
+
+
+/* ===========================
+   CONSULTORIA TERAPÊUTICA - Parte 2
+=========================== */
+.beneficios {
+  margin-top: 5rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.beneficios .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.beneficios .imagem img {
+  max-width: 550px;
+  height: auto;
+  filter: drop-shadow(0px 0px 20px #0ff);
+}
+
+.beneficios .texto h2 {
+  color: #0094ff;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.beneficios .texto ul {
+    list-style: none !important;
+  padding: 0;
+  margin: 0;
+
+  padding: 0;
+}
+
+.beneficios .texto ul li {
+  font-size: 18px;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.beneficios .texto ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0094ff;
+  font-size: 20px;
+}
+
+
+/* ===========================
+   COMO FUNCIONA
+=========================== */
+.como-funciona {
+  background-image: linear-gradient(180deg,#000 0%, #050608 70%);
+  background-color: #000;
+  color: #fff;
+  
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.como-funciona h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.como-funciona h2 span {
+  color: #0094ff;
+}
+
+.como-funciona ol {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.como-funciona ol li {
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+}
+
+.como-funciona ol li strong {
+  font-weight: 700;
+}
+
+
+/* ===========================
+   DEPOIMENTOS
+=========================== */
+.depoimentos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  padding: 12px 0;
+}
+
+.depoimentos::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -8%;
+  width: 92%;
+  height: 200px;
+  background: radial-gradient(closest-side, rgba(0,148,255,0.20), rgba(0,148,255,0.08) 40%, transparent 60%);
+  filter: blur(22px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35), 0 0 18px rgba(0,148,255,0.06);
+  border: 1px solid rgba(0,148,255,0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.card .empresa {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.45;
+}
+
+
+/* ===========================
+   PREÇOS
+=========================== */
+.precos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.plano {
+  border-radius: 15px;
+  padding: 26px 28px;
+  min-width: 300px;
+  max-width: 420px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,60,140,0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(180deg, #0a6fe0, #003c92);
+}
+
+.plano .titulo {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.plano .valor {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 4px 0;
+  line-height: 1;
+}
+
+.plano .valor span {
+  font-size: 64px;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.plano .detalhe {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.plano.destaque {
+  background: linear-gradient(180deg, #0079ff, #003a8c);
+}
+
+
+/* ===========================
+   FAQ (Perguntas Frequentes)
+=========================== */
+.faq {
+  background: #000;
+  color: #fff;
+  padding: 4rem;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.faq-item {
+  max-width: 700px;
+  margin: 0 auto 10px;
+  border-bottom: 1px solid #006cff;
+  text-align: left;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 15px 0;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: "⌄";
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ddd;
+  padding-right: 10px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  margin-bottom: 10px;
+}
+
+
+/* ===========================
+   CALL TO ACTION (Final)
+=========================== */
+.call-to-action {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  
+}
+
+.call-to-action h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.call-to-action .highlight {
+  color: #1e90ff;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 2rem 6rem;
+  background: linear-gradient(to right, #3b8fe8, #154373);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+  animation: piscar 1.2s ease-in-out infinite; /* animação de piscar */
+}
+
+.cta-button:hover {
+  background: linear-gradient(90deg, #003366, #4a90e2);
+  transform: scale(1.05);
+  animation: none; /* para a animação ao passar o mouse */
+  
+}
+
+.call-to-action .limited {
+  margin-top: 25px;
+  font-size: 23px;
+  color: #ccc;
+  
+}
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  /* HERO */
+
+    .hero{
+          background: url("img/landing1024.png") no-repeat center center/cover;
+    }
+
+   .beneficios .texto ul li::before {
+    content: none;
+  }
+
+
+  .hero-content {
+    flex-direction: column;
+    margin-right: 0;          /* tira o offset gigante */
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-text {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 350px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  /* FEATURES */
+  .features {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+    gap: 1.2rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  /* HIGHLIGHTS */
+  .highlights,
+  .highlights2 {
+    gap: 40px;
+    flex-wrap: wrap; /* quebra caso não caiba */
+  }
+
+  /* BENEFÍCIOS */
+  .beneficios .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .beneficios .imagem img {
+    max-width: 350px;
+  }
+
+  .beneficios .texto h2 {
+    font-size: 24px;
+  }
+
+  .beneficios .texto ul li {
+    font-size: 16px;
+  }
+
+  /* DEPOIMENTOS */
+  .depoimentos {
+    gap: 15px;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  /* PREÇOS */
+  .precos {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .plano {
+    min-width: 260px;
+    max-width: 360px;
+  }
+
+  /* FAQ */
+  .faq {
+    padding: 2.5rem 1rem;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+}
+
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  .hero-content {
+    min-height: auto;
+    padding: 3rem 1.5rem;
+      position: relative;
+  background: url("img/landingmobile.png") no-repeat center center/cover;
+  }
+
+  .hero-text h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn, .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .highlights,
+  .highlights2 {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .beneficios .container {
+    gap: 20px;
+  }
+
+  .beneficios .imagem img {
+    max-width: 300px;
+  }
+
+  .depoimentos {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .precos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plano {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+
+  .call-to-action h2 {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .call-to-action .limited {
+    font-size: 18px;
+  }
+
+  .about h2{
+    font-weight: 900;
+  }
+
+  .about p{
+    margin: 2rem;
+  }
+
+  .beneficios .texto ul li::before {
+    content: none;
+  }
+
+  .como-funciona{
+    margin-top: 2rem;
+  }
+
+.depoimentos {
+  display: flex;
+  gap: 20px; /* espaço entre os cards */
+  justify-content: center;
+  flex-wrap: wrap; /* deixa quebrar linha no desktop */
+}
+
+.depoimento {
+  flex: 1 1 300px; /* cada card ocupa pelo menos 300px */
+  max-width: 350px;
+}
+
+/* --- Só no celular --- */
+@media (max-width: 768px) {
+  .depoimentos {
+    flex-direction: column;  /* um embaixo do outro */
+    align-items: center;     /* centraliza */
+  }
+
+  .depoimento {
+    max-width: 90%; /* ocupa quase a tela toda */
+  }
+}
+
+}
