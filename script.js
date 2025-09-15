@@ -23,3 +23,23 @@ document.querySelectorAll(".faq-question").forEach((pergunta) => {
     }
   });
 });
+
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 3,     // quantas imagens aparecem ao mesmo tempo
+  spaceBetween: 20,     // espaço entre elas
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },   // celular
+    768: { slidesPerView: 2 },   // tablet
+    1024: { slidesPerView: 4 },  // desktop
+  }
+});

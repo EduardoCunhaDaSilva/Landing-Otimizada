@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page - Hero</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
     <!-- Hero Section -->
@@ -123,7 +125,7 @@
 
     <!-- como funciona -->
 
-    <section class="como-funciona">
+        <section class="como-funciona">
       <div class="container">
         <h2>COMO <span>FUNCIONA?</span></h2>
         <ol>
@@ -146,54 +148,31 @@
           </li>
         </ol>
 
-        <div class="depoimentos">
-          <div class="card">
-            <img src="img/perfil.png" alt="Rafael Maicura" />
-            <h3>Rafael Maicura</h3>
-            <p class="empresa">Ravenda Mais</p>
-            <p>
-              “Tivemos um aumento de 30% na geração de leads. A inteligência da
-              ferramenta da Leadster também melhorou a qualidade de lead,
-              fazendo com que nosso time comercial recebesse mais oportunidades
-              quentes”
-            </p>
-          </div>
-          <div class="card">
-            <img src="img/perfil.png" alt="Rafael Maicura" />
-            <h3>Rafael Maicura</h3>
-            <p class="empresa">Ravenda Mais</p>
-            <p>
-              “Tivemos um aumento de 30% na geração de leads. A inteligência da
-              ferramenta da Leadster também melhorou a qualidade de lead,
-              fazendo com que nosso time comercial recebesse mais oportunidades
-              quentes”
-            </p>
-          </div>
-          <div class="card">
-            <img src="img/perfil.png" alt="Rafael Maicura" />
-            <h3>Rafael Maicura</h3>
-            <p class="empresa">Ravenda Mais</p>
-            <p>
-              “Tivemos um aumento de 30% na geração de leads. A inteligência da
-              ferramenta da Leadster também melhorou a qualidade de lead,
-              fazendo com que nosso time comercial recebesse mais oportunidades
-              quentes”
-            </p>
-          </div>
-          <div class="card">
-            <img src="img/perfil.png" alt="Rafael Maicura" />
-            <h3>Rafael Maicura</h3>
-            <p class="empresa">Ravenda Mais</p>
-            <p>
-              “Tivemos um aumento de 30% na geração de leads. A inteligência da
-              ferramenta da Leadster também melhorou a qualidade de lead,
-              fazendo com que nosso time comercial recebesse mais oportunidades
-              quentes”
-            </p>
-          </div>
+        
+    </section>
+
+  <section class="como-funciona">
+    <div class="container">
+      
+      <!-- Carrossel -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide"><img src="img/prova1.png" alt="Prova social 1"></div>
+          <div class="swiper-slide"><img src="img/prova2.png" alt="Prova social 2"></div>
+          <div class="swiper-slide"><img src="img/prova3.png" alt="Prova social 3"></div>
+          <div class="swiper-slide"><img src="img/prova4.png" alt="Prova social 4"></div>
+          <div class="swiper-slide"><img src="img/prova5.png" alt="Prova social 5"></div>
+
         </div>
 
-        <div class="precos">
+        <!-- Botões de navegação -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <div class="precos">
           <div class="plano">
             <p class="titulo">Sessão avulsa (60–90 min)</p>
             <p class="valor">R$<span>500</span>,00</p>
@@ -205,9 +184,9 @@
           </div>
         </div>
       </div>
-    </section>
+  </section>
 
-    <!-- como funciona fim -->
+    <!-- Carrosel -->
 
     <!-- perguntas frequentes -->
 
@@ -269,6 +248,7 @@
   <!-- pronto para alinhar sua mente fim -->
 
   <!-- Linkando o JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

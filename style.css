@@ -16,28 +16,54 @@ body {
 
 /* Personalizar a barra de rolagem */
 ::-webkit-scrollbar {
-  width: 12px;              /* largura da barra */
+  width: 12px; /* largura da barra */
 }
 
 /* Trilha (fundo da barra) */
 ::-webkit-scrollbar-track {
-  background: #002b5c;      /* azul escuro */
+  background: #002b5c; /* azul escuro */
   border-radius: 10px;
 }
 
 /* Puxador (thumb) */
 ::-webkit-scrollbar-thumb {
-  background: #00aaff;      /* azul claro */
+  background: #00aaff; /* azul claro */
   border-radius: 10px;
   border: 2px solid #002b5c; /* cria "espaço" entre o thumb e a track */
 }
 
 /* Efeito ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
-  background: #0099dd;      /* tom um pouco mais escuro no hover */
+  background: #0099dd; /* tom um pouco mais escuro no hover */
 }
 
+/* ===========================
+   CARROSSEL DEPOIMENTOS
+=========================== */
+.swiper {
+  width: 100%;
+  max-width: 1200px; /* largura máxima */
+  margin: 50px auto;
+}
 
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões de navegação */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000; /* cor das setas */
+}
 
 /* ===========================
    HERO (cabeçalho principal)
@@ -48,7 +74,7 @@ body {
 }
 
 .hero-content {
-  background: rgba(0, 20, 40,); /* overlay */
+  background: rgba(0, 20, 40); /* overlay */
   padding: 5rem 2rem;
   display: flex;
   align-items: center;
@@ -97,14 +123,14 @@ body {
 }
 
 @keyframes piscar {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
     opacity: 0.9;
   }
 }
-
 
 /* ===========================
    FEATURES (itens destacados)
@@ -121,7 +147,6 @@ body {
   line-height: 1.3;
 }
 
-
 /* ===========================
    DIVISOR DE SEÇÕES
 =========================== */
@@ -137,7 +162,6 @@ body {
   width: 100%;
   background: #1a73e8;
 }
-
 
 /* ===========================
    ABOUT (Quem é Diego Sousa)
@@ -198,7 +222,6 @@ body {
   margin-top: 30px;
 }
 
-
 /* ===========================
    CONSULTORIA TERAPÊUTICA - Parte 1
 =========================== */
@@ -214,7 +237,6 @@ body {
   display: flex;
   height: 150px;
 }
-
 
 /* ===========================
    CONSULTORIA TERAPÊUTICA - Parte 2
@@ -248,11 +270,9 @@ body {
 }
 
 .beneficios .texto ul {
-    list-style: none !important;
+  list-style: none !important;
   padding: 0;
   margin: 0;
-
-  padding: 0;
 }
 
 .beneficios .texto ul li {
@@ -270,15 +290,13 @@ body {
   font-size: 20px;
 }
 
-
 /* ===========================
    COMO FUNCIONA
 =========================== */
 .como-funciona {
-  background-image: linear-gradient(180deg,#000 0%, #050608 70%);
+  background-image: linear-gradient(180deg, #000 0%, #050608 70%);
   background-color: #000;
   color: #fff;
-  
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -314,7 +332,6 @@ body {
   font-weight: 700;
 }
 
-
 /* ===========================
    DEPOIMENTOS
 =========================== */
@@ -337,7 +354,12 @@ body {
   top: -8%;
   width: 92%;
   height: 200px;
-  background: radial-gradient(closest-side, rgba(0,148,255,0.20), rgba(0,148,255,0.08) 40%, transparent 60%);
+  background: radial-gradient(
+    closest-side,
+    rgba(0, 148, 255, 0.2),
+    rgba(0, 148, 255, 0.08) 40%,
+    transparent 60%
+  );
   filter: blur(22px);
   z-index: 0;
   pointer-events: none;
@@ -350,8 +372,8 @@ body {
   padding: 20px;
   width: 250px;
   text-align: center;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.35), 0 0 18px rgba(0,148,255,0.06);
-  border: 1px solid rgba(0,148,255,0.08);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35), 0 0 18px rgba(0, 148, 255, 0.06);
+  border: 1px solid rgba(0, 148, 255, 0.08);
   position: relative;
   z-index: 1;
 }
@@ -381,7 +403,6 @@ body {
   line-height: 1.45;
 }
 
-
 /* ===========================
    PREÇOS
 =========================== */
@@ -400,7 +421,7 @@ body {
   max-width: 420px;
   color: #fff;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0,60,140,0.28);
+  box-shadow: 0 12px 30px rgba(0, 60, 140, 0.28);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -436,7 +457,6 @@ body {
 .plano.destaque {
   background: linear-gradient(180deg, #0079ff, #003a8c);
 }
-
 
 /* ===========================
    FAQ (Perguntas Frequentes)
@@ -501,7 +521,6 @@ body {
   margin-bottom: 10px;
 }
 
-
 /* ===========================
    CALL TO ACTION (Final)
 =========================== */
@@ -510,7 +529,6 @@ body {
   background: #000;
   color: #fff;
   font-family: Arial, sans-serif;
-  
 }
 
 .call-to-action h2 {
@@ -540,32 +558,30 @@ body {
   background: linear-gradient(90deg, #003366, #4a90e2);
   transform: scale(1.05);
   animation: none; /* para a animação ao passar o mouse */
-  
 }
 
 .call-to-action .limited {
   margin-top: 25px;
   font-size: 23px;
   color: #ccc;
-  
 }
 
-/* Tablets (até 1024px) */
+/* ===========================
+   RESPONSIVIDADE - Tablets (até 1024px)
+=========================== */
 @media (max-width: 1024px) {
   /* HERO */
+  .hero {
+    background: url("img/landing1024.png") no-repeat center center/cover;
+  }
 
-    .hero{
-          background: url("img/landing1024.png") no-repeat center center/cover;
-    }
-
-   .beneficios .texto ul li::before {
+  .beneficios .texto ul li::before {
     content: none;
   }
 
-
   .hero-content {
     flex-direction: column;
-    margin-right: 0;          /* tira o offset gigante */
+    margin-right: 0; /* tira o offset gigante */
     text-align: center;
     padding: 3rem 1.5rem;
   }
@@ -587,7 +603,7 @@ body {
 
   /* FEATURES */
   .features {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
     margin-top: 2rem;
     text-align: center;
@@ -597,7 +613,7 @@ body {
   .highlights,
   .highlights2 {
     gap: 40px;
-    flex-wrap: wrap; /* quebra caso não caiba */
+    flex-wrap: wrap;
   }
 
   /* BENEFÍCIOS */
@@ -649,28 +665,29 @@ body {
   }
 }
 
-
-/* Celulares (até 768px) */
+/* ===========================
+   RESPONSIVIDADE - Celulares (até 768px)
+=========================== */
 @media (max-width: 768px) {
   .hero-content {
     min-height: auto;
     padding: 3rem 1.5rem;
-      position: relative;
-  background: url("img/landingmobile.png") no-repeat center center/cover;
+    position: relative;
+    background: url("img/landingmobile.png") no-repeat center center/cover;
   }
 
   .hero-text h1 {
     margin-top: 2rem;
     font-size: 2rem;
     font-weight: 900;
-    
   }
 
   .hero-text p {
     font-size: 1rem;
   }
 
-  .btn, .cta-button {
+  .btn,
+  .cta-button {
     padding: 1rem 2rem;
     font-size: 1rem;
   }
@@ -730,11 +747,11 @@ body {
     font-size: 18px;
   }
 
-  .about h2{
+  .about h2 {
     font-weight: 900;
   }
 
-  .about p{
+  .about p {
     margin: 2rem;
   }
 
@@ -742,32 +759,35 @@ body {
     content: none;
   }
 
-  .como-funciona{
+  .como-funciona {
     margin-top: 2rem;
   }
 
-.depoimentos {
-  display: flex;
-  gap: 20px; /* espaço entre os cards */
-  justify-content: center;
-  flex-wrap: wrap; /* deixa quebrar linha no desktop */
-}
-
-.depoimento {
-  flex: 1 1 300px; /* cada card ocupa pelo menos 300px */
-  max-width: 350px;
-}
-
-/* --- Só no celular --- */
-@media (max-width: 768px) {
   .depoimentos {
-    flex-direction: column;  /* um embaixo do outro */
-    align-items: center;     /* centraliza */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .depoimento {
-    max-width: 90%; /* ocupa quase a tela toda */
-  }
-}
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
 
+  .container {
+    margin: 25px;
+  }
+
+  /* --- Só no celular --- */
+  @media (max-width: 768px) {
+    .depoimentos {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .depoimento {
+      max-width: 90%;
+    }
+  }
 }
